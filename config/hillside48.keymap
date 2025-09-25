@@ -7,7 +7,6 @@
 #include "keys_pt_abnt2.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -37,10 +36,10 @@
  */
 
             bindings = <
-&kp ESC    &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                      &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O      &kp PT_P      &kp PT_ACUTE
-&kp TAB    &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                      &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L      &kp PT_COLON  &kp PT_SINGLE_QUOTE
-&kp LSHFT  &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B   &kp CAPSLOCK                        &kp DELETE     &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT       &kp SLASH     &kp ENTER
-                     &kp LEFT_GUI            &kp LALT  &kp LCTRL  &kp SPACE     &mo SYM_L  &mo NUM_L  &kp BACKSPACE  &kp RALT  &mo 6                &kp PT_TILDE
+&kp ESC    &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                  &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O             &kp PT_P      &kp PT_ACUTE
+&kp TAB    &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                  &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L             &kp PT_SEMI   &kp PT_TILDE
+&kp LSHFT  &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B   &kp CAPSLOCK                    &kp DELETE     &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT              &kp PT_SLASH  &kp ENTER
+                     &kp LEFT_GUI            &kp LALT  &kp LCTRL  &kp SPACE     &mo SYM_L  &mo 6  &kp BACKSPACE  &kp RALT  &mo 5                &kp PT_SINGLE_QUOTE
             >;
         };
 
@@ -149,13 +148,11 @@
  */
 
             bindings = <
-&to MAC_Q_L  &to QWERTY_L  &to DVORAK_L  &to COLEMK_L      &to NUM_L     &none                                             &none   &kp PRINTSCREEN  &none  &ext_power EP_OFF  &ext_power EP_ON  &kp PT_GRAVE
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4                                      &none   &none            &none  &none              &kp PT_SEMI       &kp PT_DOUBLE_QUOTES
-&bootloader  &sys_reset    &none         &kp PT_C_CEDILLA  &out OUT_BLE  &none         &bt BT_CLR                  &none   &none   &none            &none  &none              &none             &trans
-                           &trans                          &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans                  &kp PT_CARET
+&kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                      &kp PT_ASTRK  &kp PT_UNDER  &kp PT_PLUS  &kp PT_LEFT_PARENTHESIS  &kp PT_RIGHT_PARENTHESIS  &kp PT_GRAVE
+&kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                       &none         &none         &none        &none                    &kp PT_COLON              &kp PT_CARET
+&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &none           &bt BT_CLR                  &none   &none         &none         &none        &none                    &kp PT_QUESTION           &trans
+                                      &trans                            &trans        &trans          &trans      &trans  &trans  &trans  &trans        &trans                     &kp PT_CARET
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
