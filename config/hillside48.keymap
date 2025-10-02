@@ -150,7 +150,7 @@
             bindings = <
 &kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                              &kp PT_ASTRK  &kp PT_UNDER  &kp PT_PLUS  &kp PT_LEFT_PARENTHESIS  &kp PT_RIGHT_PARENTHESIS  &kp PT_GRAVE
 &kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                               &none         &none         &none        &none                    &kp PT_COLON              &kp PT_CARET
-&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &none           &bt BT_CLR                  &bt BT_CLR_ALL  &none         &none         &none        &none                    &kp PT_QUESTION           &trans
+&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &out OUT_TOG    &bt BT_CLR                  &bt BT_CLR_ALL  &none         &none         &none        &none                    &kp PT_QUESTION           &trans
                                       &trans                            &trans        &bt BT_PRV      &trans      &trans  &trans  &trans          &bt BT_NXT    &trans                     &kp PT_CARET
             >;
         };
