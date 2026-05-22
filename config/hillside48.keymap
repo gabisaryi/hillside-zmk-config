@@ -23,6 +23,15 @@
 #define Paste  LC(V)
 
 / {
+    macros {
+        new_macrowindot: new_macrowindot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp PT_DOT>;
+            label = "NEW_MACROWINDOT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -36,10 +45,10 @@
  */
 
             bindings = <
-&kp ESC    &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                  &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O             &kp PT_P      &kp PT_ACUTE
-&kp TAB    &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                  &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L             &kp PT_SEMI   &kp PT_TILDE
-&kp LSHFT  &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B   &kp CAPSLOCK                    &kp DELETE     &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT              &kp PT_SLASH  &kp ENTER
-                     &kp LEFT_GUI            &kp LALT  &kp LCTRL  &kp SPACE     &mo SYM_L  &mo 6  &kp BACKSPACE  &kp RALT  &mo 5                &kp PT_SINGLE_QUOTE
+&kp ESC         &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                     &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O      &kp PT_P      &kp BACKSPACE
+&kp LEFT_SHIFT  &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                     &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L      &kp PT_SEMI   &kp PT_SINGLE_QUOTE
+&kp LCTRL       &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B  &kp CAPSLOCK                           &kp DELETE  &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT       &kp PT_SLASH  &new_macrowindot
+                          &kp LEFT_GUI            &kp LALT  &mo 4     &mo 5         &kp PT_SPACE  &kp ENTER  &mo 3       &mo 2     &kp TAB              &kp PT_TILDE
             >;
         };
 
@@ -58,8 +67,6 @@
 &kp LSHFT  &kp SEMI  &kp Q      &kp J    &kp K      &kp X     &kp LGUI                         &kp ESC    &kp B     &kp M      &kp W  &kp V     &kp Z  &kp RSHFT
                      &kp CAPS            &kp LCTRL  &kp LALT  &kp SPACE  &mo SYM_L  &mo NUM_L  &kp SPACE  &kp LALT  &kp SLASH         &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         colemak_layer {
@@ -77,8 +84,6 @@
 &kp LSHFT  &kp Z  &kp X     &kp C  &kp D      &kp V     &kp LGUI                         &kp ESC    &kp K     &kp H    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
                   &kp CAPS         &kp LCTRL  &kp LALT  &kp SPACE  &mo SYM_L  &mo NUM_L  &kp SPACE  &kp LALT  &kp SQT             &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         mac_default_layer {
@@ -96,8 +101,6 @@
 &kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B     &kp LALT                         &kp ESC    &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
                   &kp CAPS         &kp LCTRL  &kp LCMD  &kp SPACE  &mo SYM_L  &mo NUM_L  &kp SPACE  &kp RALT  &kp SQT             &kp C_PP
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         sym_layer {
@@ -110,13 +113,11 @@
  */
 
             bindings = <
-&kp HOME  &kp EXCL  &kp AT    &kp HASH   &kp DOLLAR  &kp PERCENT                                          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &trans
-&kp END   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &kp PG_UP                                            &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH  &trans
-&trans    &kp Undo  &kp Cut   &kp Copy   &kp Paste   &kp PG_DN    &sk RALT                     &kp K_APP  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE  &trans
-                    &trans               &trans      &trans       &trans    &trans  &mo ADJ_L  &trans     &trans     &trans                &kp RCTRL
+&trans  &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                                              &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &kp BACKSPACE
+&trans  &trans    &trans   &trans    &trans      &kp PG_UP                                                &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH  &kp RA(PT_A)
+&trans  &kp Undo  &kp Cut  &kp Copy  &kp Paste   &kp PG_DN    &sk RALT                  &kp PT_C_CEDILLA  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE  &kp RA(PT_O)
+                  &trans             &trans      &trans       &trans    &trans  &trans  &trans            &trans     &trans                &kp RCTRL
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         num_layer {
@@ -129,13 +130,11 @@
  */
 
             bindings = <
-&kp F1     &kp F2  &kp HOME  &kp UP    &kp END    &kp F9                                           &kp SLASH  &kp N7  &kp N8  &kp N9    &kp MINUS  &trans
-&kp F3     &kp F4  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F10                                          &kp ASTRK  &kp N4  &kp N5  &kp N6    &kp PLUS   &trans
-&kp LSHFT  &kp F5  &kp F6    &kp F7    &kp F8     &kp F11  &kp F12                     &kp C_MUTE  &kp COMMA  &kp N1  &kp N2  &kp N3    &kp EQUAL  &kp DEL
-                   &trans              &trans     &trans   &trans   &mo ADJ_L  &trans  &trans      &kp N0     &trans          &kp C_PP
+&kp F1  &kp F2  &kp F3  &kp F4      &kp F5    &kp F6                                                       &kp PAGE_UP      &kp PT_MINUS   &kp PT_PLUS      &kp PT_N0  &kp PT_N8  &kp PT_N9
+&kp F7  &kp F8  &kp F9  &kp F10     &kp F11   &kp F12                                                      &kp PAGE_DOWN    &kp KP_DIVIDE  &kp KP_ASTERISK  &kp PT_N7  &kp PT_N5  &kp PT_N6
+&trans  &trans  &trans  &kp INSERT  &kp HOME  &kp END  &kp RIGHT_ALT                             &kp UP    &kp PRINTSCREEN  &kp PT_COMMA   &kp PT_DOT       &kp PT_N4  &kp PT_N2  &kp PT_N3
+                &trans              &trans    &trans   &trans         &mo ADJ_L  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT        &kp ENTER                       &kp PT_N1
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         adj_layer {
@@ -148,10 +147,10 @@
  */
 
             bindings = <
-&kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                              &kp PT_ASTRK  &kp PT_UNDER  &kp PT_PLUS  &kp PT_LEFT_PARENTHESIS  &kp PT_RIGHT_PARENTHESIS  &kp PT_GRAVE
-&kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                               &none         &none         &none        &none                    &kp PT_COLON              &kp PT_CARET
-&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &out OUT_TOG    &bt BT_CLR                  &bt BT_CLR_ALL  &none         &none         &none        &none                    &kp PT_QUESTION           &trans
-                                      &trans                            &trans        &bt BT_PRV      &trans      &trans  &trans  &trans          &bt BT_NXT    &trans                     &kp PT_CARET
+&kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                          &kp PT_ASTRK  &kp PT_UNDER  &kp PT_PLUS  &kp PT_LEFT_PARENTHESIS  &bt BT_SEL 1    &bt BT_SEL 0
+&kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                           &none         &none         &none        &none                    &bt BT_CLR_ALL  &bt BT_NXT
+&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &out OUT_TOG    &none                   &bt BT_CLR_ALL  &none         &none         &none        &none                    &bt BT_CLR      &bt BT_PRV
+                                      &trans                            &trans        &trans          &trans  &trans  &trans  &trans          &trans        &trans                     &bt BT_DISC 1
             >;
         };
     };
