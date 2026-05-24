@@ -47,7 +47,7 @@
             bindings = <
 &kp ESC         &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                     &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O      &kp PT_P      &kp BACKSPACE
 &kp LEFT_SHIFT  &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                     &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L      &kp PT_SEMI   &kp PT_SINGLE_QUOTE
-&kp LCTRL       &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B  &kp CAPSLOCK                           &kp DELETE  &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT       &kp PT_SLASH  &kp LS(PT_ACUTE)
+&kp LCTRL       &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B  &kp CAPSLOCK                           &kp DELETE  &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT       &kp PT_SLASH  &kp PT_ACUTE
                           &kp LEFT_GUI            &kp LALT  &mo 4     &mo 5         &kp PT_SPACE  &kp ENTER  &mo 3       &mo 2     &kp TAB              &kp PT_TILDE
             >;
         };
@@ -130,10 +130,10 @@
  */
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4      &kp F5    &kp F6                                                       &kp PAGE_UP      &kp PT_MINUS   &kp PT_PLUS      &kp PT_N0  &kp PT_N8  &kp PT_N9
-&kp F7  &kp F8  &kp F9  &kp F10     &kp F11   &kp F12                                                      &kp PAGE_DOWN    &kp KP_DIVIDE  &kp KP_ASTERISK  &kp PT_N7  &kp PT_N5  &kp PT_N6
-&trans  &trans  &trans  &kp INSERT  &kp HOME  &kp END  &kp RIGHT_ALT                             &kp UP    &kp PRINTSCREEN  &kp PT_COMMA   &kp PT_DOT       &kp PT_N4  &kp PT_N2  &kp PT_N3
-                &trans              &trans    &trans   &trans         &mo ADJ_L  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT        &kp ENTER                       &kp PT_N1
+&kp F1  &kp F2  &kp F3  &kp F4      &kp F5        &kp F6                                                       &kp PAGE_UP      &kp PT_MINUS   &kp PT_PLUS      &kp PT_N0  &kp PT_N8  &kp PT_N9
+&kp F7  &kp F8  &kp F9  &kp F10     &kp F11       &kp F12                                                      &kp PAGE_DOWN    &kp KP_DIVIDE  &kp KP_ASTERISK  &kp PT_N7  &kp PT_N5  &kp PT_N6
+&trans  &trans  &trans  &kp INSERT  &kp HOME      &kp END  &kp RIGHT_ALT                             &kp UP    &kp PRINTSCREEN  &kp PT_COMMA   &kp PT_DOT       &kp PT_N4  &kp PT_N2  &kp PT_N3
+                &trans              &kp LEFT_ALT  &trans   &trans         &mo ADJ_L  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT        &kp ENTER                       &kp PT_N1
             >;
         };
 
