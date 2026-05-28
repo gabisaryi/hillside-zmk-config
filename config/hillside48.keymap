@@ -31,11 +31,25 @@
             label = "NEW_MACROWINDOT";
         };
 
-        tils: tils {
+        aos: tils {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TILDE &kp A &kp O>;
+            bindings = <&kp PT_TILDE &kp A &kp O>;
             label = "TILS";
+        };
+
+        aes: aes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp A &kp E>;
+            label = "AES";
+        };
+
+        oes: oes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp PT_O &kp E>;
+            label = "OES";
         };
     };
 
@@ -103,10 +117,10 @@
  */
 
             bindings = <
-&kp GRAVE  &kp Q  &kp W     &kp E  &kp R      &kp T                                           &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSPC
-&kp TAB    &tils  &kp S     &kp D  &kp F      &kp G                                           &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp V      &kp B     &kp LALT                   &kp ESC    &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
-                  &kp CAPS         &kp LCTRL  &kp LCMD  &kp SPACE  &trans  &trans  &kp SPACE  &kp RALT  &kp SQT             &kp C_PP
+&kp GRAVE       &oes  &kp W     &kp E  &kp R      &kp T                                           &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSPC
+&kp LEFT_SHIFT  &aos  &kp S     &kp D  &kp F      &kp G                                           &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT       &aes  &kp X     &kp C  &kp V      &kp B     &kp LALT                   &kp ESC    &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
+                      &kp CAPS         &kp LCTRL  &kp LCMD  &kp SPACE  &trans  &trans  &kp SPACE  &kp RALT  &kp SQT             &kp C_PP
             >;
         };
 
