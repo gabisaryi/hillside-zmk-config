@@ -117,10 +117,10 @@
  */
 
             bindings = <
-&kp GRAVE       &oes  &kp W     &kp E  &kp R      &kp T                                           &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSPC
-&kp LEFT_SHIFT  &aos  &kp S     &kp D  &kp F      &kp G                                           &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
-&kp LSHFT       &aes  &kp X     &kp C  &kp V      &kp B     &kp LALT                   &kp ESC    &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
-                      &kp CAPS         &kp LCTRL  &kp LCMD  &kp SPACE  &trans  &trans  &kp SPACE  &kp RALT  &kp SQT             &kp C_PP
+&kp GRAVE       &oes  &kp W     &kp E             &kp R      &kp T                                           &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSPC
+&kp LEFT_SHIFT  &aos  &kp S     &kp D             &kp F      &kp G                                           &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT       &aes  &kp X     &kp PT_C_CEDILLA  &kp V      &kp B     &kp LALT                   &kp ESC    &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
+                      &kp CAPS                    &kp LCTRL  &kp LCMD  &kp SPACE  &trans  &trans  &kp SPACE  &kp RALT  &kp SQT             &kp C_PP
             >;
         };
 
@@ -134,10 +134,10 @@
  */
 
             bindings = <
-&trans  &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                                              &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &kp BACKSPACE
-&trans  &trans    &trans   &trans    &trans      &kp PG_UP                                                &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH  &kp RA(PT_A)
-&trans  &kp Undo  &kp Cut  &kp Copy  &kp Paste   &kp PG_DN    &sk RALT                  &kp PT_C_CEDILLA  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE  &kp RA(PT_O)
-                  &trans             &trans      &trans       &trans    &trans  &trans  &trans            &trans     &trans                &kp RCTRL
+&trans  &kp EXCL  &kp AT   &kp HASH          &kp DOLLAR  &kp PERCENT                                              &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR  &kp BACKSPACE
+&trans  &trans    &trans   &trans            &trans      &kp PG_UP                                                &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH  &kp RA(PT_A)
+&trans  &kp Undo  &kp Cut  &kp PT_C_CEDILLA  &kp Paste   &kp PG_DN    &sk RALT                  &kp PT_C_CEDILLA  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE  &kp RA(PT_O)
+                  &trans                     &trans      &trans       &trans    &trans  &trans  &trans            &trans     &trans                &kp RCTRL
             >;
         };
 
