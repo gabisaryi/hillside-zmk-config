@@ -66,10 +66,10 @@
  */
 
             bindings = <
-&kp ESC         &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                     &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O      &kp PT_P      &kp PT_ACUTE
-&kp LEFT_SHIFT  &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                     &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L      &kp PT_SEMI   &kp PT_SINGLE_QUOTE
-&kp LCTRL       &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B  &kp CAPSLOCK                           &kp DELETE  &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT       &kp PT_SLASH  &kp BACKSPACE
-                          &kp LEFT_GUI            &kp LALT  &mo 4     &mo 5         &kp PT_SPACE  &kp ENTER  &mo 3       &mo 2     &kp TAB              &kp PT_TILDE
+&kp ESC         &kp PT_Q  &kp PT_W      &kp PT_E  &kp PT_R  &kp PT_T                                                     &kp PT_Y  &kp PT_U  &kp PT_I   &kp PT_O       &kp PT_P      &kp PT_ACUTE
+&kp LEFT_SHIFT  &kp PT_A  &kp PT_S      &kp PT_D  &kp PT_F  &kp PT_G                                                     &kp PT_H  &kp PT_J  &kp PT_K   &kp PT_L       &kp PT_SEMI   &kp PT_SINGLE_QUOTE
+&kp LCTRL       &kp PT_Z  &kp PT_X      &kp PT_C  &kp PT_V  &kp PT_B  &kp CAPSLOCK                           &kp DELETE  &kp PT_N  &kp PT_M  &kp COMMA  &kp DOT        &kp PT_SLASH  &kp PT_TILDE
+                          &kp LEFT_GUI            &kp LALT  &mo 4     &mo 5         &kp PT_SPACE  &kp ENTER  &mo 3       &mo 2     &kp TAB              &kp BACKSPACE
             >;
         };
 
@@ -168,10 +168,10 @@
  */
 
             bindings = <
-&kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                          &kp PT_ASTRK  &kp PT_UNDER  &kp PT_PLUS  &kp PT_LEFT_PARENTHESIS  &bt BT_SEL 1    &bt BT_SEL 0
-&kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                           &none         &none         &none        &none                    &bt BT_CLR_ALL  &bt BT_NXT
-&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &out OUT_TOG    &none                   &bt BT_CLR_ALL  &none         &none         &none        &none                    &bt BT_CLR      &bt BT_PRV
-                                      &trans                            &trans        &trans          &trans  &trans  &trans  &trans          &trans        &trans                     &bt BT_DISC 1
+&kp C_SLEEP       &kp PT_EXCLAMATION  &kp PT_AT       &kp UP            &kp PT_HASH   &kp PT_PERCENT                                          &kp PT_ASTRK  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2   &bt BT_SEL 1    &bt BT_SEL 0
+&kp PT_PIPE       &kp PT_UMLAUT       &kp LEFT_ARROW  &kp DOWN          &kp RIGHT     &kp PT_DOLLAR                                           &none         &none         &none         &none          &bt BT_CLR_ALL  &bt BT_NXT
+&kp PT_BACKSLASH  &sys_reset          &none           &kp PT_C_CEDILLA  &out OUT_BLE  &out OUT_TOG    &none                   &bt BT_CLR_ALL  &none         &none         &none         &none          &bt BT_CLR      &bt BT_PRV
+                                      &trans                            &trans        &trans          &trans  &trans  &trans  &trans          &trans        &trans                      &bt BT_DISC 1
             >;
         };
     };
